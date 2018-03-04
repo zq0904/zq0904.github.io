@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #081fc2;
+  background: #3efab1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3123,7 +3123,7 @@ pre .javascript .function {
 }
 th,
 td {
-  bottom-border: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 table>tbody>tr:nth-of-type(odd) {
   background-color: #fff;
