@@ -1,0 +1,28 @@
+/*使 markdown table border 一致*/
+th, td {
+  border-bottom: 1px solid #eee;
+}
+table>tbody>tr:nth-of-type(odd) {
+  background-color: #fff;
+}
+/*圆形头像*/
+.site-author-image {
+  border-radius: 50%;
+  padding: 2px;
+  border: 2px dashed #fff;
+  transition: border-radius 2s;
+}
+.site-author-image:hover {
+  animation: alterSquare 1s linear forwards;
+}
+@keyframes alterSquare {
+  0% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 10%;
+  }
+}
+.site-author-name {
+  font-size: 16px;
+}
