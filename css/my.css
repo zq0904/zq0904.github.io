@@ -1,20 +1,163 @@
 /*使 markdown table border 一致*/
-th, td {
+
+th,
+td {
   border-bottom: 1px solid #eee;
 }
+
 table>tbody>tr:nth-of-type(odd) {
   background-color: #fff;
 }
+
+
+
+/*头部展示隐藏*/
+
+.headband {
+  height: 0;
+}
+
+
+
+/*格纹背景*/
+
+.bg-gradient {
+  /* background: #192224; */
+  background: -moz-linear-gradient(top, #192224 0%, #21728b 100%);
+  /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #192224), color-stop(100%, #21728b)); */
+  background: -webkit-linear-gradient(top, #192224 0%, #21728b 100%);
+  background: -o-linear-gradient(top, #192224 0%, #21728b 100%);
+  background: -ms-linear-gradient(top, #192224 0%, #21728b 100%);
+  background: linear-gradient(to bottom, #192224 0%, #21728b 100%);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -2;
+}
+
+.bg-pattern {
+  background: url("/images/bg-pattern.png") repeat;
+  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+
+/*星空效果 暂时用svg*/
+
+.bg-pattern {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.bg-pattern::after {
+  content: '';
+  display: block;
+  -webkit-animation: slide 8s linear infinite;
+  -moz-animation: slide 8s linear infinite;
+  -o-animation: slide 8s linear infinite;
+  -ms-animation: slide 8s linear infinite;
+  animation: slide 8s linear infinite;
+  background-image: url(/images/stars.svg);
+  background-position: center center;
+  -webkit-background-size: 240px;
+  -moz-background-size: 240px;
+  background-size: 240px;
+  height: 400%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 400%;
+  z-index: 1;
+}
+@keyframes slide {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-240px, -240px, 0);
+    -moz-transform: translate3d(-240px, -240px, 0);
+    -o-transform: translate3d(-240px, -240px, 0);
+    -ms-transform: translate3d(-240px, -240px, 0);
+    transform: translate3d(-240px, -240px, 0);
+  }
+}
+
+/*文章标题*/
+.posts-expand a.post-title-link{
+    display: inline-block;
+    padding: 0 0.625rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.375rem;
+    text-align: center;
+    border-radius: 0.125rem;
+    color: rgba(25,153,236, 1);
+}
+a.post-title-link:hover {
+    text-decoration: none;
+    color: rgba(183, 50, 183, 1);
+    background-color: rgba(0, 0, 0, .7);
+    transition: all 1s;
+    cursor: pointer;
+}
+.posts-expand .post-title-link::before {
+  width: 0;
+}
+/*右上角github样式*/
+.github-corner:hover .octo-arm,.github-corner:hover .octo-body{
+  transition: all 0.75s;
+  fill: rgba(183, 50, 183, .5);
+}
+ .github-corner:hover svg{
+  transition: all 0.75s;
+  fill: rgba(0, 0, 0, .5) !important;
+ }
+
+/*
+
+rgba(25,153,236, 1)   蓝色
+
+rgba(183, 50, 183, 1) 紫色
+rgba(0, 0, 0, 0.7) 透明黑
+
+*/
+
+
+/*镂空效果的导航及文章*/
+.site-meta,
+.header-inner,
+.sidebar-inner,
+.sidebar {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.post-block {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+
+
+
+
 /*圆形头像*/
+
 .site-author-image {
   border-radius: 50%;
   padding: 2px;
   border: 2px dashed #fff;
   transition: border-radius 2s;
 }
+
 .site-author-image:hover {
   animation: alterSquare 1s linear forwards;
 }
+
 @keyframes alterSquare {
   0% {
     border-radius: 50%;
@@ -23,6 +166,7 @@ table>tbody>tr:nth-of-type(odd) {
     border-radius: 10%;
   }
 }
+
 .site-author-name {
   font-size: 16px;
 }
