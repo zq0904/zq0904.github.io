@@ -1,6 +1,7 @@
 $(function () {
   showArticleMap();
   rollColour();
+  eruda.init();
 });
 
 // 显示首页的文章底图 有底图没有红色背景
