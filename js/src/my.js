@@ -9,14 +9,21 @@ function showArticleMap() {
       var $e = $(e);
       if ($e.attr('data-image')) {
         e.style = $e.attr('data-image');
+        // background: url(/articleBackgroundImages/miku.jpg) no-repeat center/cover;
+        // console.log($e.attr('data-image').split(' '))
+        $e.css({
+          'background': $e.attr('data-image').split(' ')[1],
+          'background-repeat': 'no-repeat',
+          'background-position': 'center center',
+          'background-size': 'cover'
+        })
         $e.children('.post-block').css({
           'background-color': 'rgba(0,0,0,0)'
         });
         window.alert($e.attr('data-image'));
-        window.alert($e.css('background'));
-        // window.alert($e.css('background'));
-        // console.log( $('article').eq(1).css('background'));
-        // console.log($e.css('background'));
+        window.alert($e.attr('style'));
+        window.alert($('.post-type-normal').eq(1).attr('style'))
+
       }
       $e = null;
     });
