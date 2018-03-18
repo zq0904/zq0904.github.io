@@ -1,7 +1,7 @@
 $(function () {
   showArticleMap();
   rollColour();
-  eruda.init();
+  eruda.init(); // 初始化调试工具 eruda
 });
 
 // 显示首页的文章底图 有底图没有红色背景
@@ -9,18 +9,16 @@ function showArticleMap() {
   if (window.location.pathname === '/') {
     $('.post-type-normal').each(function (i, e) {
       var $e = $(e);
-      if ($e.attr('data-image')) {
-        e.style = $e.attr('data-image');
-        console.log("$e.data('image'):"+$e.data('image'));
-        console.log("$e.attr('data-image'):"+$e.attr('data-image'));
-        // background: url(/articleBackgroundImages/miku.jpg) no-repeat center/cover;
+      if ($e.data('image')) {
+        e.style = $e.data('image');
+        console.log(e.style.background)
         // console.log($e.attr('data-image').split(' '))
-        $e.css({
-          'background': $e.attr('data-image').split(' ')[1],
-          'background-repeat': 'no-repeat',
-          'background-position': 'center center',
-          'background-size': 'cover'
-        })
+        // $e.css({
+        //   'background': $e.attr('data-image').split(' ')[1],
+        //   'background-repeat': 'no-repeat',
+        //   'background-position': 'center center',
+        //   'background-size': 'cover'
+        // })
         $e.children('.post-block').css({
           'background-color': 'rgba(0,0,0,0)'
         });
