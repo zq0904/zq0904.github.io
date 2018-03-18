@@ -2,6 +2,11 @@ $(function () {
   showArticleMap();
   rollColour();
 });
+// 手机端调试工具 Eruda
+(function () { var script = document.createElement('script');
+  script.src = "http://eruda.liriliri.io/eruda.min.js";
+  document.body.appendChild(script);
+  script.onload = function () { eruda.init() } })();
 // 显示首页的文章底图 有底图没有红色背景
 function showArticleMap() {
   if (window.location.pathname === '/') {
@@ -9,6 +14,8 @@ function showArticleMap() {
       var $e = $(e);
       if ($e.attr('data-image')) {
         e.style = $e.attr('data-image');
+        console.log("$e.data('image'):"+$e.data('image'));
+        console.log("$e.attr('data-image'):"+$e.attr('data-image'));
         // background: url(/articleBackgroundImages/miku.jpg) no-repeat center/cover;
         // console.log($e.attr('data-image').split(' '))
         $e.css({
@@ -20,9 +27,9 @@ function showArticleMap() {
         $e.children('.post-block').css({
           'background-color': 'rgba(0,0,0,0)'
         });
-        window.alert($e.attr('data-image'));
-        window.alert($e.attr('style'));
-        window.alert($('.post-type-normal').eq(1).attr('style'))
+        // window.alert($e.attr('data-image'));
+        // window.alert($e.attr('style'));
+        // window.alert($('.post-type-normal').eq(1).attr('style'))
 
       }
       $e = null;
