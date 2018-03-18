@@ -2,7 +2,6 @@ $(function () {
   showArticleMap();
   rollColour();
   eruda.init(); // 初始化调试工具 eruda
-  document.getElementById('header').style = 'color: red'
 });
 
 // 显示首页的文章底图 有底图没有红色背景
@@ -12,12 +11,13 @@ function showArticleMap() {
       var $e = $(e);
       var data_image = $e.data('image');
       if (data_image) {
+        // sefari 不支持 .style= 这种写法
         $e.css({
           'background': data_image,
           'background-repeat': 'no-repeat',
           'background-position': 'center',
           'background-size': 'cover'
-        })
+        });
         $e.children('.post-block').css({
           'background-color': 'rgba(0,0,0,0)'
         });
