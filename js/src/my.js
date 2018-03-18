@@ -2,6 +2,7 @@ $(function () {
   showArticleMap();
   rollColour();
   eruda.init(); // 初始化调试工具 eruda
+  document.getElementById('header').style = 'color: red'
 });
 
 // 显示首页的文章底图 有底图没有红色背景
@@ -9,25 +10,20 @@ function showArticleMap() {
   if (window.location.pathname === '/') {
     $('.post-type-normal').each(function (i, e) {
       var $e = $(e);
-      if ($e.data('image')) {
-        e.style = $e.data('image');
-        console.log(e.style.background)
-        // console.log($e.attr('data-image').split(' '))
-        // $e.css({
-        //   'background': $e.attr('data-image').split(' ')[1],
-        //   'background-repeat': 'no-repeat',
-        //   'background-position': 'center center',
-        //   'background-size': 'cover'
-        // })
+      var data_image = $e.data('image');
+      if (data_image) {
+        $e.css({
+          'background': data_image,
+          'background-repeat': 'no-repeat',
+          'background-position': 'center',
+          'background-size': 'cover'
+        })
         $e.children('.post-block').css({
           'background-color': 'rgba(0,0,0,0)'
         });
-        // window.alert($e.attr('data-image'));
-        // window.alert($e.attr('style'));
-        // window.alert($('.post-type-normal').eq(1).attr('style'))
-
       }
       $e = null;
+      data_image = null;
     });
   }
 }
