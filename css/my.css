@@ -161,12 +161,26 @@ a[rel="section"]>span, a[rel="section"]:hover>span {
   -o-text-fill-color: transparent;
   -ms-text-fill-color: transparent;
 }
+.links-of-author-item a {
+  background-image: linear-gradient(180deg, #3366ff 30%, #66ccff 50%, #cc33ff 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+}
 /*炫彩icon*/
 .common-icon {
   float: left;
   margin: 5px 7px 0 0;
   width: 1.3em;
   height: 1.3em;
+}
+.common-icon-link {
+  float: left;
+  margin-right: 7px;
+  width: 2em;
+  height: 2em;
 }
 .zq-home{
   background: url(/icon/home.png) no-repeat center/100%;
@@ -186,7 +200,18 @@ a[rel="section"]>span, a[rel="section"]:hover>span {
 .zq-heartbeat{
   background: url(/icon/heart.png) no-repeat center/100%;
 }
-
+.zq-github{
+  background: url(/icon/github.png) no-repeat center/100%;
+}
+.zq-envelope{
+  background: url(/icon/envelope.png) no-repeat center/100%;
+}
+.zq-google{
+  background: url(/icon/google.png) no-repeat center/100%;
+}
+.zq-qqSpace{
+  background: url(/icon/qqSpace.png) no-repeat center/100%;
+}
 /*圆形头像*/
 
 .site-author-image {

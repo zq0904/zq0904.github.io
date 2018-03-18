@@ -3,7 +3,6 @@ $(function () {
   rollColour();
   eruda.init(); // 初始化调试工具 eruda
 });
-
 // 显示首页的文章底图 有底图没有红色背景
 function showArticleMap() {
   if (window.location.pathname === '/') {
