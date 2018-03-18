@@ -12,7 +12,7 @@ function showArticleMap() {
         $e.children('.post-block').css({
           'background-color': 'rgba(0,0,0,0)'
         });
-        window.alert($e.data('image'));
+        window.alert($e.attr('data-image'));
         window.alert($e.css('background'));
         // window.alert($e.css('background'));
         // console.log( $('article').eq(1).css('background'));
