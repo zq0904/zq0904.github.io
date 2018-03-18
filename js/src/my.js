@@ -4,7 +4,6 @@ $(function () {
 });
 // 显示首页的文章底图 有底图没有红色背景
 function showArticleMap() {
-  window.alert(window.location.pathname)
   if (window.location.pathname === '/') {
     $('.post-type-normal').each(function (i, e) {
       var $e = $(e);
@@ -13,6 +12,7 @@ function showArticleMap() {
         $e.children('.post-block').css({
           'background-color': 'rgba(0,0,0,0)'
         });
+        window.alert(window.location.pathname, e.style)
       }
       $e = null;
     });
