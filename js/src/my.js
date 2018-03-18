@@ -7,8 +7,8 @@ function showArticleMap() {
   if (window.location.pathname === '/') {
     $('.post-type-normal').each(function (i, e) {
       var $e = $(e);
-      if ($e.data('image')) {
-        e.style = $e.data('image');
+      if ($e.attr('data-image')) {
+        e.style = $e.attr('data-image');
         $e.children('.post-block').css({
           'background-color': 'rgba(0,0,0,0)'
         });
