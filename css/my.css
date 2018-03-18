@@ -9,15 +9,11 @@ table>tbody>tr:nth-of-type(odd) {
   background-color: #fff;
 }
 
-
-
 /*头部展示隐藏*/
 
 .headband {
   height: 0;
 }
-
-
 
 /*格纹背景*/
 
@@ -43,7 +39,6 @@ table>tbody>tr:nth-of-type(odd) {
   position: fixed;
   z-index: -1;
 }
-
 
 /*星空效果 暂时用svg*/
 
@@ -109,6 +104,12 @@ a.post-title-link:hover {
 .posts-expand .post-title-link::before {
   width: 0;
 }
+/*阴影效果*/
+.post-type-normal, .header-inner, .sidebar-inner {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+}
 /*右上角github样式*/
 .github-corner:hover .octo-arm,.github-corner:hover .octo-body{
   transition: all 0.75s;
@@ -140,10 +141,51 @@ rgba(0, 0, 0, 0.7) 透明黑
 .post-block {
   background-color: rgba(255, 0, 0, 0.1);
 }
-
-
-
-
+/*炫彩色*/
+.site-subtitle{
+  text-decoration: none;
+  background-image: linear-gradient(145deg, #0c00ff 0%, #580bcb 12.5%, #ff45fd 25%, #52e0e0 37.5%, #0c00ff 50%, #580bcb 62.5%, #ff45fd 75%, #52e0e0 87.5%, #0c00ff 100%);
+  background-size: 230% 100%;
+  background-position: 0%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+}
+a[rel="section"]>span, a[rel="section"]:hover>span {
+  background-image: linear-gradient(135deg, #cc33ff 0%, #3366ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+}
+/*炫彩icon*/
+.common-icon {
+  float: left;
+  margin: 5px 7px 0 0;
+  width: 1.3em;
+  height: 1.3em;
+}
+.zq-home{
+  background: url(/icon/home.png) no-repeat center/100%;
+}
+.zq-user{
+  background: url(/icon/me.png) no-repeat center/100%;
+}
+.zq-tags{
+  background: url(/icon/label.png) no-repeat center/100%;
+}
+.zq-th{
+  background: url(/icon/classify.png) no-repeat center/100%;
+}
+.zq-archive{
+  background: url(/icon/record.png) no-repeat center/100%;
+}
+.zq-heartbeat{
+  background: url(/icon/heart.png) no-repeat center/100%;
+}
 
 /*圆形头像*/
 

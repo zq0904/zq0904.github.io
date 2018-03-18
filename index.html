@@ -325,6 +325,7 @@
       }
       })()'>心跳</a> </li>
 
+      <!--
       
         
         <li class="menu-item menu-item-home">
@@ -386,6 +387,81 @@
           </a>
         </li>
       
+      -->
+      <!-- 使用自己的icon -->
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="common-icon zq-home"></i> <br />
+            
+              <span>
+                首页
+              </span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="common-icon zq-user"></i> <br />
+            
+              <span>
+                关于
+              </span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="common-icon zq-tags"></i> <br />
+            
+              <span>
+                标签
+              </span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="common-icon zq-th"></i> <br />
+            
+              <span>
+                分类
+              </span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="common-icon zq-archive"></i> <br />
+            
+              <span>
+                归档
+              </span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="common-icon zq-heartbeat"></i> <br />
+            
+              <span>
+                公益404
+              </span>
+          </a>
+        </li>
+      
 
       
 
@@ -415,7 +491,7 @@
   
   
   <!-- 设置背景 -->
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article" style="">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article" data-image="">
   
   
   
@@ -559,7 +635,7 @@
   
   
   <!-- 设置背景 -->
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article" style="background: url(/articleBackgroundImages/miku.jpg) no-repeat center/cover;">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article" data-image="background: url(/articleBackgroundImages/miku.jpg) no-repeat center/cover;">
   
   
   
@@ -730,7 +806,7 @@
   
   
   <!-- 设置背景 -->
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article" style="">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article" data-image="">
   
   
   
@@ -826,14 +902,18 @@
 
       
         
-          description必须写
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/03/03/hello-world/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
         
       
     </div>
@@ -1015,7 +1095,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -1024,6 +1105,14 @@
   
 </div>
 
+<div class="powered-by">
+<i class="fa fa-user-md"></i>
+<span id="busuanzi_container_site_uv">
+  本站总访问量<span id="busuanzi_value_site_uv"></span>次
+</span>
+</div>
+
+<!-- 注释掉hexo
 
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
@@ -1035,6 +1124,7 @@
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
+-->
 
 
 
